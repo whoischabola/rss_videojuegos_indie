@@ -70,6 +70,38 @@ body {
     margin: 20px 0;
 }
 
+/* --- ESTILOS DE LA IMAGEN DESTACADA --- */
+.featured-image {
+    margin: 25px 0 30px 0;
+    width: 100%;
+    border: 1px solid #1a1a1a;
+}
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Filtro para que sea B/N por defecto (estilo periódico) */
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+/* Al pasar el ratón, la imagen recupera el color */
+.featured-image:hover img {
+    filter: grayscale(0%);
+}
+
+.featured-image figcaption {
+    font-size: 9px;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    border-top: 1px solid #1a1a1a;
+    background-color: #f0f0f0;
+    letter-spacing: 1px;
+}
+/* ------------------------------------- */
+
 .tag-simple {
     font-size: 10px;
     font-weight: 900;
@@ -80,8 +112,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    /* Grid placement: Row 1 / Col 2. 
-       If content is long, it spans multiple rows automatically */
     grid-column: 2; 
     grid-row: 1 / span 2; 
 }
@@ -222,14 +252,13 @@ p {
     font-weight: 900;
 }
 
-/* --- RSS MODULE STYLES --- */
+/* --- ESTILOS DEL MÓDULO RSS --- */
 
 .rss-subscribe-card {
-    /* Forzamos que vaya a la primera columna, debajo del artículo */
     grid-column: 1;
     margin-top: 0;
     padding-top: 20px;
-    border-top: 4px solid #000; /* Borde grueso estilo brutalista */
+    border-top: 4px solid #000;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -294,7 +323,7 @@ p {
 
 @media (max-width: 900px) {
     .magazine-grid { grid-template-columns: 1fr; }
-    .sidebar-cards { grid-column: 1; grid-row: auto; } /* Reset para móvil */
+    .sidebar-cards { grid-column: 1; grid-row: auto; }
     .rss-subscribe-card { grid-column: 1; }
     .footer-container { grid-template-columns: 1fr; gap: 30px; }
 }
