@@ -49,3 +49,176 @@ body {
     font-size: 11px;
     font-weight: 900;
 }
+
+.magazine-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+}
+
+.featured {
+    border-top: 1.5px solid #000;
+    padding-top: 20px;
+}
+
+.featured h2 {
+    font-family: "Georgia", serif;
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.tag-simple {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.sidebar-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.entry-card {
+    border: 1px solid #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.entry-card__header {
+    display: flex;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.entry-card__tag {
+    padding: 8px 15px;
+    font-size: 11px;
+    font-weight: 900;
+    color: #006eb3; 
+    border-right: 1px solid #1a1a1a;
+    background-color: transparent;
+    text-transform: uppercase;
+}
+
+.entry-card__spacer {
+    flex-grow: 1;
+}
+
+.entry-card:hover .entry-card__header {
+    background-color: #1a1a1a;
+}
+
+.entry-card:hover .entry-card__tag {
+    color: #ffffff;
+    border-right: 1px solid #ffffff;
+}
+
+.entry-card .card-content {
+    padding: 20px;
+}
+
+.entry-card h2 {
+    font-family: "Georgia", serif;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.link {
+    font-size: 10px;
+    font-weight: 900;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #000;
+    text-transform: uppercase;
+}
+
+.main-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 2px solid #000;
+    padding-top: 40px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+
+.footer-column h4 {
+    font-size: 12px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.footer-links a.rss-link {
+    color: #ff6600;
+}
+
+.footer-subscribe {
+    display: flex;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 5px;
+}
+
+.footer-subscribe input {
+    background: transparent;
+    border: none;
+    flex-grow: 1;
+    outline: none;
+    font-size: 12px;
+}
+
+.footer-subscribe button {
+    background: transparent;
+    border: none;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    padding: 20px 0;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+@media (max-width: 900px) {
+    .magazine-grid { grid-template-columns: 1fr; }
+    .footer-container { grid-template-columns: 1fr; gap: 30px; }
+}
