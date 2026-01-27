@@ -80,6 +80,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    /* Grid placement: Row 1 / Col 2. 
+       If content is long, it spans multiple rows automatically */
+    grid-column: 2; 
+    grid-row: 1 / span 2; 
 }
 
 .entry-card {
@@ -218,7 +222,79 @@ p {
     font-weight: 900;
 }
 
+/* --- RSS MODULE STYLES --- */
+
+.rss-subscribe-card {
+    /* Forzamos que vaya a la primera columna, debajo del artículo */
+    grid-column: 1;
+    margin-top: 0;
+    padding-top: 20px;
+    border-top: 4px solid #000; /* Borde grueso estilo brutalista */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rss-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.status-indicator {
+    color: #ff4500;
+    animation: blink 2s infinite;
+}
+
+.rss-body h3 {
+    font-family: "Georgia", serif;
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.rss-body p {
+    font-size: 14px;
+    max-width: 90%;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.rss-button {
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 28px;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 1px solid #1a1a1a;
+}
+
+.rss-button:hover {
+    background-color: transparent;
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+/* --- MEDIA QUERIES --- */
+
 @media (max-width: 900px) {
     .magazine-grid { grid-template-columns: 1fr; }
+    .sidebar-cards { grid-column: 1; grid-row: auto; } /* Reset para móvil */
+    .rss-subscribe-card { grid-column: 1; }
     .footer-container { grid-template-columns: 1fr; gap: 30px; }
 }
