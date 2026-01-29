@@ -14,7 +14,7 @@ Below are the details regarding the project requirements:
 | **Hosting Platform** | **GitHub Pages**. |
 | **Aggregator Used** | **Feedly**. |
 | **Web URL** | **https://whoischabola.github.io/rss_videojuegos_indie/** |
-| **Feed URL** | **whoischabola.github.io/isabelruizcallejon/** |
+| **Feed URL** | **https://whoischabola.github.io/isabelruizcallejon/** |
 
 ---
 
