@@ -14,7 +14,7 @@ Below are the details regarding the project requirements:
 | **Hosting Platform** | **GitHub Pages**. |
 | **Aggregator Used** | **Feedly**. |
 | **Web URL** | **https://whoischabola.github.io/isabelruizcallejon/** |
-| **Feed URL** | **https://whoischabola.github.io/isabelruizcallejon/** |
+| **Feed URL** | **https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fwhoischabola.github.io%2Fisabelruizcallejon%2Ffeed.rss/** |
 
 ---
 
